@@ -6,19 +6,22 @@
 
 ## Influences (Brief)
 
-- *Influence #1*:
-  - Medium: *(Television, Games, Literature, Movies, etc.)*
-  - Explanation: *In one paragraph or less, explain why this is an influence.*
-- *Influence #2*:
-  - Medium: *(Television, Games, Literature, Movies, etc.)*
-  - Explanation: *In one paragraph or less, explain why this is an influence.*
-- *Influence #3*:
-  - Medium: *(Television, Games, Literature, Movies, etc.)*
-  - Explanation: *In one paragraph or less, explain why this is an influence.*
+- *3Blue1Brown*:
+  - Medium: Video
+  - Explanation: Emphisis on storytelling, and how mathmatical formalisms fall out of wants and needs, not definitions.
+  - https://www.youtube.com/watch?v=OkmNXy7er84
+- https://explorabl.es/:
+  - Medium: *Games*
+  - Explanation: I like the way many of these "explorable explinations" are formatted. The way I see it, it's moreso like a texbook chapter but with friendlier prose and lots of interactive examples in the place of where figures would be.
+- These French Quantum Physics Videos:
+  - Medium: *Video*
+  - Explanation: I really dig the minimalist graphical aesthetics and sound design in these videos for some reason. I think it'll fit the theme of the game well.
+  - https://www.youtube.com/watch?v=DC0U5viudt0
 
 ## Core Gameplay Mechanics (Brief)
 
-*Give a very high-level description of any core gameplay mechanics*
+Gameplay is a strong word, its more-so having a bunch of sliders and knobs you can twiddle and tweak to see how these various components interact.
+
 
 - *Gameplay Mechanic #1*
 - *Gameplay Mechanic #2*
@@ -29,54 +32,94 @@
 
 ## Learning Domains
 
-*Briefly list any and all of the disciplines and learning domains for this subject.*
+- Asymptotic Analysis/Big O Notation
+  - In the context of algorithms
 
 ## Target Audiences
 
-*Who are your learners?*
+While I am making this specifically for CISC320, I hope that it is also useful for curious individuals interested in the mathmatical formalism behind algorithm analysis.
 
 ## Target Contexts
 
-*Describe what kinds of formal and informal learning contexts this will be used in (e.g., courses, k-12 computer labs during free time).*
+This is designed to be a public website that can be accessed whenever. It can be used as a supplement for an algorithms course, but can also be consumed standalone.
+
+It's format suits itself to be played individually and in one sitting.
 
 ## Learning Objectives
-
-*Remember, Learning Objectives are NOT simply topics. They are statements of observable behavior that a learner can do after the learning experience. You cannot observe someone "understanding" or "knowing" something.*
-
-- *Short Name*: *Formal Learning Objective #1*
-- *Short Name*: *Formal Learning Objective #2*
-- *Short Name*: *Formal Learning Objective #3*
+- Explain why Algorithms are best *generally* described using limiting behavior rather than other metrics
+- Describe when asymptonic analysis is *not* useful 
+- Formally define Big O, Omega, and Theta 
+- Given polynomial/exponential functions f(x) and g(x), Formally prove that function f(x) is:
+  - O(g(x))
+  - Ω(g(x))
+  - Θ(g(x))
+  - All by finding the appropriate constants and values of N
 
 ## Prerequisite Knowledge
 
-*What do they need to know prior to trying this game?*
-
-- *Prerequisite Learning Objective #1*
-- *Prerequisite Learning Objective #2*
+- Basic familiarity with high school algebra
 
 ## Assessment Measures
+As we discussed, it's probably going to be a canvas quiz of some sorts. The original Big O quiz can serve as our pre-test.
 
-*Describe how the learning will be assessed, e.g., pre/post multiple-choice test, or SAT, or some other instrument.*
+Some example questions (not final)
 
-*If proposing a new instrument, briefly and concisely list some example assessment questions.*
+**Prove Big O Relations**
+
+Pretty much identical to what you gave on the quiz.
+
+**Select all that apply type question**
+
+f(x) = n^3-10n
+
+  - O(2^n)
+  - O(n^3)
+  - Ω(n)
+  - Ω(n^3)
+  - Θ(n^3)
+
+**When not to use Big O**
+
+Give some general reasons why an algorithm in a "slower" complexity class might be better to use in practice than one in a "faster" complexity class.
+
 
 # What sets this project apart?
 
-*Give some reasons why this game is not like every other game out there. Whether the learning objective is unique, the gameplay mechanics are new, or what. You should persuade the reader that your game is novel and worthy of development. Consider arguments that would be persuasive to a Venture Capitalist, Teacher, or Researcher. These might be focused on learning needs, too.*
+- I have yet to see a nice interactive that deals with Big O notation. A lot of the online resources I see are static websites or videos
+- As shown, we have a learning need for proving Big O notation.
+- Computer Scientists are scared of math, and this experience will hopefully ease this transition
 
-- *Reason #1*
-- *Reason #2*
-- *Reason #3*
-- *Reason #4*
-- *etc.*
 
 # Player Interaction Patterns and Modes
 
 ## Player Interaction Pattern
 
-*Describe how people play your game, how many players are involved at once, how they interact with the system works, etc.*
+This is a single player game that will orginize itself into sections containing prose and interactive objects. In order to go on to the next section, the learner will have to complete a given interactions (Think minigames).
+
+1. Introduction
+    - The Big Question: How do we compare algorithms?
+2. Just Time It!
+    - The first assumption would be to time how long an algorithm runs for a single output.
+    - **Problem:** Different computers run at different speeds. So there really isn't any sort of frame of reference.
+3. Counting Steps
+    - So instead of using the actual time, we can instead count how many operations the algorithm does.
+4. Why We Can't Use Straight Functions
+    - **Problem**: The functions used to describe algorithms get complex quickly, or sometimes cannot even be defined well.
+    - There's an intution here that higher order functions grow faster than lower order ones; but how do we formalize that?
+5. Asymptotic Analysis
+   - The key, you could multiply 
+6. Why Big O Sucks
+7. **Bonus**: Sandbox Mode
+
+
+*Sidenote: If I was teaching Big O my own way, I would instead teach it in almost reverse of what the formalism states. f(x) is O(g(x)) iff for any constant multiple c\*f(x) <= g(x) for n > n_0. I feel like this formulation encapsulates the entire concept of "no matter how much you scale f(x), it will always be eclipsed by a g(x) with no constants.*
+
+*Or, maybe we can frame it as with x and x^2, no matter how hard you scale down x^2, at some point, **at some point it will go higher than x**.*
+
+*However, I'm afraid of confusing students with this rouge way of teaching it.*
 
 ## Player Modes
+
 
 *Your game has one or more player modes. Describe each discrete mode, considering things like menus too. Generally describe the transitions between modes too.*
 
@@ -107,6 +150,8 @@
 *What other things are in the world that you need to design? These may or may not directly translate to actual objects and classes.*
 
 ## Core Gameplay Mechanics (Detailed)
+
+
 
 - *Core Gameplay Mechanic #1*: *Describe in 2 paragraphs or less, along with how it generally works*
 - *Core Gameplay Mechanic #2*: *Describe in 2 paragraphs or less, along with how it generally works*
@@ -145,34 +190,14 @@
 
 ## Graphical
 
-- Characters List
-  - *Characters 1*
-  - *Characters 2*
-  - *...*
-- Textures:
-  - *Texture 1*
-  - *Texture 2*
-  - *...*
-- Environment Art/Textures:
-  - *Environment Texture 1*
-  - *Environment Texture 2*
-  - *...*
-
+There's not going to be too much in the way of graphics. A lot of the material will be presented though prose and dynamic graph plotting. Maybe I'll include some self-drawn cartoonish images relating to the subject to break up the prose if it becomes too dense?
 
 ## Audio
-
-
-*Game region/phase/time are ways of designating a particularly important place in the game.*
-
-- Music List (Ambient sound)
-  - *Game region/phase/time*: *Example 1*, *Example 2*
-  - *Game region/phase/time*: *Example 3*, *Example 4*
+- Music List
+  - Since this is more of a focused dive into a topic and not a game, the music will most likely be some light, synthy ambient music that's not too busy.
   
-*Game Interactions are things that trigger SFX, like character movement, hitting a spiky enemy, collecting a coin.*
-
 - Sound List (SFX)
-  - *Game Interaction*: *Example 1*, *Example 2*
-  - *Game Interaction*: *Example 3*, *Example 4*
+  - *UI Sounds*: Various types of unintrusive clicks or blips when interacting with UI objects
 
 
 # Metadata
