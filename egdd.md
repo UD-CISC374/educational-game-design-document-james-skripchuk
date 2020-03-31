@@ -98,16 +98,29 @@ This is a single player game that will orginize itself into sections containing 
 
 1. Introduction
     - The Big Question: How do we compare algorithms?
+    - In most cases, we want to make sure that our algorithm is as fast as possible given the size of the input data.
 2. Just Time It!
-    - The first assumption would be to time how long an algorithm runs for a single output.
+    - The first assumption would be to time how long an algorithm runs for different sizes of input.
     - **Problem:** Different computers run at different speeds. So there really isn't any sort of frame of reference.
+    - **Interactive:** There is a table the different running times of the same algorithm for two computers. Some sort of slider or number that you can change that will change the clock speed of one of the computers. 
 3. Counting Steps
     - So instead of using the actual time, we can instead count how many operations the algorithm does.
+    - Brief RAM Model of Computation. (From now on, functions will refer to how many steps an algorithm takes based on it's input size)
+    - "Now, it's pretty easy to see how these algorithms grow based on the size of the input"
+    - **Interactive:** Players are given pairs of functions, and prompted to compare which ones are smaller for a "very large" N. These will be simple polynomials/exponential.
 4. Why We Can't Use Straight Functions
-    - **Problem**: The functions used to describe algorithms get complex quickly, or sometimes cannot even be defined well.
-    - There's an intution here that higher order functions grow faster than lower order ones; but how do we formalize that?
-5. Asymptotic Analysis
-   - The key, you could multiply 
+    - Wait a second, how do we "compare" functions. We can't compare functions like we compare numbers... or can we? In the previous exercise, there was a sense of intuition on how n^2 would be much larger than x.
+    - **Problem**: How do we formalize this notion of functions being "better" than eachother
+5. Asymptotic Analysis: Big O
+   - (I'm really thinking of an intuitive, 3B1B way to show how the mathematics of Big O come out naturally, see notes below. For now assume I have some stellar prose that at the end of it; the learner will think that they could have derived Big O notation thyself. If you're confused on what I'm talking about, please watch more [3B1B](https://www.youtube.com/watch?v=spUNpyF58BY)
+   - The prose will take a simple example, such as f(x)=x^2-10 and prove that it is O(x^2). It will go through the process of finding an n_0 and a C. 
+   - It will also discuss that f(x) is also O(x^3), O(2^n)
+   - **Interactives**
+     - *There's going to be small mini problems working up to a full Big O proof. I think the main rub is since the student's are asked to find two variables (C and n), they get really confused. But I'm sure if you started them off with; here's a C, find N (and vice versa), you can build it up nicely.*
+     - Given C, find an n_0 such that for all n > n_0; f(x) <= C\*g(x)
+     - Given n_0, find a C such that for all n > n_0; f(x) <= C\*g(x)
+     - Find a C and n_0 to show that all n > n_0; f(x) <= C\*g(x)
+     - On the side to all of this, there will be a reactive graph that will show g(x), f(x), and where they intersect (n > n_0). I would like to implement shading to show for when n >n_0. Hopefully this visual guide 
 6. Why Big O Sucks
 7. **Bonus**: Sandbox Mode
 
