@@ -1,4 +1,4 @@
-# Game Name
+# Asymptotic Explorer 
 
 ## Elevator Pitch
 
@@ -182,6 +182,10 @@ If you've ever heard of the storytelling principle "show, not tell", that's pret
 *The Summary or TL;DR version of below*
 
 ## Storyboarding
+
+- The left side shows what I think the general layout of the page will be, prose interrupted by little mathematical sections
+- Top Right shows what I think the dynamic graphs will look like in the Big O sections. There's a slider for c down below, which will scale the graphs. In addition, n_0 is highlighted, and any values greater than n_0 is shaded in
+- Bottom right shows the "sorting" minigame, where they are asked to guess based on intuition which functions are larger for a large N
 
 ![image](./story.jpg)
 
