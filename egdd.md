@@ -177,10 +177,6 @@ As I've said for probably the billionth time, I like the 3B1B style where you're
 
 If you've ever heard of the storytelling principle "show, not tell", that's pretty much how I want to present the content. So while there might be a bit more prose than other games, it won't be like a textbook (hopefully).
 
-## Story (Brief)
-
-*The Summary or TL;DR version of below*
-
 ## Storyboarding
 
 - The left side shows what I think the general layout of the page will be, prose interrupted by little mathematical sections
